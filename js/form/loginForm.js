@@ -48,10 +48,9 @@ loginForm.addEventListener("submit", (event) => {
   if (password.value.trim() === "") {
     passwordError.textContent = "Password is required";
     valid = false;
-  }
-  if(password.value <= 8){
-    passwordError.textContent = "Password must be at least 8 character long"
-    valid = false
+  } else if (password.value.length < 8) { // Check password length
+    passwordError.textContent = "Password must be at least 8 characters";
+    valid = false;
   }
 
   if (valid) {
@@ -61,7 +60,7 @@ loginForm.addEventListener("submit", (event) => {
         // Signed in successfully
         const user = userCredential.user;
         console.log("User:", user);
-        window.location.href="../../html/index.html"
+        window.location.href = "../../html/index.html";
       })
       .catch((error) => {
         // Handle login errors
@@ -77,4 +76,3 @@ loginForm.addEventListener("submit", (event) => {
       });
   }
 });
-
