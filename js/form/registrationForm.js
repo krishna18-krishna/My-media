@@ -77,7 +77,7 @@ registrationForm.addEventListener("submit", (event) => {
         // Registration successful
         const user = userCredential.user;
         console.log("User:", user);
-        window.location.href="../../homepage.html";
+        window.location.href="../../html/homepage.html";
       })
       .catch((error) => {
         // Handle registration errors
