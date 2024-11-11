@@ -60,7 +60,7 @@ loginForm.addEventListener("submit", (event) => {
         // Signed in successfully
         const user = userCredential.user;
         console.log("User:", user);
-        window.location.href = "../../homepage.html"; // Redirect to homepage
+        window.location.href = "./homepage.html"; // Redirect to homepage
       })
       .catch((error) => {
         // Handle login errors

@@ -16,7 +16,7 @@ nav{
     top: 0;
     z-index: 100;
 }
-.logo{
+.logo img{
     height: 50px;
     width: 160px;
     display: flex;
@@ -24,23 +24,7 @@ nav{
     justify-content: space-evenly;
     align-items: center;
 }
-.circle {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 30px;
-}
-.circle a{
-    text-decoration: none; 
-    color: white;
-}
+
 .nav-left, .nav-rigth{
     display: flex;
     align-items: center;
