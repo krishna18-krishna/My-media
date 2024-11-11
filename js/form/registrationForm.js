@@ -46,11 +46,18 @@ registrationForm.addEventListener("submit", (event) => {
   confirmPasswordError.textContent = "";
   usernameError.textContent = "";
 
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   // Check if each field is empty and set error messages if necessary
   if (email.value.trim() === "") {
       emailError.textContent = "Email is required";
       valid = false;
   }
+  else if (!emailPattern.test(email.value.trim())) {
+    emailError.textContent = "Email is invalid";
+    valid = false;
+  }
+  
   if (fullname.value.trim() === "") {
       fullnameError.textContent = "Full name is required";
       valid = false;

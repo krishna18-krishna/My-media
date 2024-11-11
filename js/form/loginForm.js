@@ -38,9 +38,15 @@ loginForm.addEventListener("submit", (event) => {
   emailError.textContent = "";
   passwordError.textContent = "";
 
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   // Check if email is empty
   if (email.value.trim() === "") {
     emailError.textContent = "Email is required";
+    valid = false;
+  }
+  else if (!emailPattern.test(email.value.trim())) {
+    emailError.textContent = "Email is invalid";
     valid = false;
   }
 
@@ -71,7 +77,7 @@ loginForm.addEventListener("submit", (event) => {
         } else if (errorCode === 'auth/user-not-found') {
           emailError.textContent = "User not found.";
         } else {
-          alert(errorMessage);
+          alert("Invalid Email and Password");
         }
       });
   }
